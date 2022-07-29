@@ -1,2 +1,3 @@
 # custom-path-filtering
-Showcase how you may have to customize the path-filtering orb
+
+Showcase path-filtering orb and github protection rules
