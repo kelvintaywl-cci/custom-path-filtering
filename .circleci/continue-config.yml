@@ -4,7 +4,7 @@ parameters:
   run-foo:
     type: boolean
     default: false
-  run-foo:
+  run-fizz:
     type: boolean
     default: false
 
