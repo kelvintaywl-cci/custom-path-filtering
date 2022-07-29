@@ -1,0 +1,45 @@
+version: 2.1
+
+parameters:
+  run-foo:
+    type: boolean
+    default: false
+  run-foo:
+    type: boolean
+    default: false
+
+jobs:
+  done:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - run: echo DONE
+  fizz:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - run: echo FIZZ
+  foo:
+    docker:
+      - image: cimg/base:stable
+    resource_class: small
+    steps:
+      - run: echo FOO
+ 
+workflows:
+  run-foo:
+    when: << pipeline.parameters.run-foo >>
+    jobs:
+      - foo
+      - done:
+          requires:
+            - foo
+  run-fizz:
+    when: << pipeline.parameters.run-fizz >>
+    jobs:
+      - fizz
+      - done:
+          requires:
+            - fizz
