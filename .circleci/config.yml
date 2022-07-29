@@ -12,5 +12,5 @@ workflows:
           base-revision: main
           config-path: .circleci/continue-config.yml
           mapping: |
-            foo.* build-foo true
-            fizz/.* build-fizz true
+            foo.* run-foo true
+            fizz/.* run-fizz true
