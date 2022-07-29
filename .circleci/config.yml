@@ -14,3 +14,5 @@ workflows:
           mapping: |
             foo.* run-foo true
             fizz/.* run-fizz true
+            README.md run-fizz true
+            README.md run-foo true
