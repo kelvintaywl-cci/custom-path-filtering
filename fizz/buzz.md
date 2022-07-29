@@ -1,1 +1,1 @@
-goodbye, from Buzz.
+goodbye now, from Buzz.
